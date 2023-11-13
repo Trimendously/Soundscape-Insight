@@ -16,6 +16,7 @@ The goal of this application is to allow users to upload various sound files(.wa
 * On a Unix system while in the project's root directory:
 
 Ensure FFTW is installed from [https://www.fftw.org/download.html](https://www.fftw.org/download.html)
+
 On Unix once installed add it to the audio-processing directory and run these commands (ONLY NEED TO DO THIS ONCE) in its directory:
 
 ``` bash
@@ -33,7 +34,7 @@ $ ./Audio-Insight
 $ python python_scripts/main.py
 ```
 
-Non-Unix instructions coming soon.
+* Non-Unix instructions coming soon.
 ## Context
 * Uses C++ for audio processing
 * Uses python for audio analysis
@@ -48,9 +49,9 @@ Non-Unix instructions coming soon.
 
 ## Future
 - [ ] Bundle all commands into single executable (will differ based off OS I believe)
-- [ ] Add band-pass filter (for outliers)
+- [x] Add band-pass filter (for outliers)
 - [ ] Add distinct noise filtering
-- [ ] Allow for spectrogram visualizations
+- [x] Allow for spectrogram visualizations
 
 
 
