@@ -2,6 +2,9 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
 
+# Linker flags
+LDFLAGS = -L./audio-processing/fftw -Wl,-rpath=./audio-processing/fftw -lfftw3 -lm
+
 # Executable name
 EXECUTABLE = Audio-Insight
 
@@ -16,7 +19,7 @@ all: $(EXECUTABLE)
 
 # Build the executable
 $(EXECUTABLE): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 
 # Compile source files to object files
 %.o: %.cpp
